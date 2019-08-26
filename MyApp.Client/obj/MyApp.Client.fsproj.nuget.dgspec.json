@@ -1,0 +1,84 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\LOGS001\\Documents\\Visual Code\\QuintoSemestre\\1\\MyApp\\src\\MyApp.Client\\MyApp.Client.fsproj": {}
+  },
+  "projects": {
+    "C:\\Users\\LOGS001\\Documents\\Visual Code\\QuintoSemestre\\1\\MyApp\\src\\MyApp.Client\\MyApp.Client.fsproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\LOGS001\\Documents\\Visual Code\\QuintoSemestre\\1\\MyApp\\src\\MyApp.Client\\MyApp.Client.fsproj",
+        "projectName": "MyApp.Client",
+        "projectPath": "C:\\Users\\LOGS001\\Documents\\Visual Code\\QuintoSemestre\\1\\MyApp\\src\\MyApp.Client\\MyApp.Client.fsproj",
+        "packagesPath": "C:\\Users\\LOGS001\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LOGS001\\Documents\\Visual Code\\QuintoSemestre\\1\\MyApp\\src\\MyApp.Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LOGS001\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Bolero": {
+              "target": "Package",
+              "version": "[0.7.8-preview*, )"
+            },
+            "Bolero.Build": {
+              "target": "Package",
+              "version": "[0.7.8-preview*, )"
+            },
+            "Bolero.HotReload": {
+              "target": "Package",
+              "version": "[0.7.2-preview*, )"
+            },
+            "FSharp.Core": {
+              "target": "Package",
+              "version": "[4.6.2, )"
+            },
+            "Microsoft.AspNetCore.Blazor.Build": {
+              "target": "Package",
+              "version": "[3.0.0-preview7.*, )"
+            },
+            "Microsoft.AspNetCore.Blazor.DevServer": {
+              "target": "Package",
+              "version": "[3.0.0-preview7.*, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

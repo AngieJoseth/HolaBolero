@@ -1,0 +1,400 @@
+<!-- <div class="columns">    
+   <aside class="column sidebar is-narrow">
+      <section class="section">
+        <nav class="menu">
+          <ul class="menu-list">
+            ${Menu}
+            <template id="MenuItem">
+              <li><a class="${Active}" href="${Url}">${Text}</a></li>
+            </template>
+          </ul>
+        </nav>
+      </section>
+    </aside>
+    <div class="column">
+       <section class="section">
+        ${Body}
+  
+        <div id="notification-area">
+          <div>${Error}</div>
+        </div>
+  
+       <template id="Home">
+          <div class="content">
+            <h1 class="title">Bolero!</h1>
+            <p>Esta Aplicación es hecha en bolero F#</p>
+            <ul>
+              <li>
+                The entire application is driven by
+                <a target="_blank" href="https://fsbolero.github.io/docs/Elmish">Elmish</a>.
+              </li>
+              <li>
+                The menu on the left switches pages based on
+                <a target="_blank" href="https://fsbolero.github.io/docs/Routing">routes</a>.
+              </li>
+              <li>
+                The <a href="/counter">Counter</a> page demonstrates event handlers and data binding in
+                <a target="_blank" href="https://fsbolero.github.io/docs/Templating">HTML templates</a>.
+              </li>
+              <li>
+                The <a href="/data">Download data</a> page demonstrates the use of
+                <a target="_blank" href="https://fsbolero.github.io/docs/Remoting">remote functions</a>.
+              </li>
+            </ul>
+            <p>Enjoy writing awesome apps!</p>
+          </div>
+        </template>
+  
+        <template id="Counter">
+          <h1 class="title">Contador Simple</h1>
+          <p>
+            <button onclick="${Decrement}" class="btn btn-secondary">-</button>
+            <input type="number" id="counter" class="input" bind="${Value}">
+            <button onclick="${Increment}" class="btn btn-secondary">+</button>
+          </p>
+          <p>
+            El valor del Contador es: ${Value}
+          </p>
+        </template>
+   
+        <template id="Data">
+          <h1 class="title">
+            Descargar Datos
+            <button class="button" onclick="${Reload}">Refrescar Página</button>
+          </h1>
+          <p>
+          Bienvenido ${Username}.
+            <button class="button" onclick="${SignOut}">Salir</button>
+          </p>
+          <table class="table is-fullwidth">
+            <thead>
+              <tr>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Publicidad</th>
+                <th>ISBN</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${Rows}
+              <template id="EmptyData">
+                <tr><td colspan="4">Cargando lista de libros...</td></tr>
+              </template>
+            </tbody>
+          </table>
+        </template>
+  
+        <template id="SignIn">           
+            <h1 class="title">Iniciar Sesión</h1>
+            <form onsubmit="${SignIn}">
+              <div class="field">
+                <label class="label">Username</label>
+                <div class="control">
+                  <input class="text" bind="${Username}" />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Password</label>
+                <div class="control">
+                  <input class="text" type="password" bind="${Password}" />
+                </div>
+              </div>
+              <div class="field">
+                  <div class="control">
+                    <button type="submit" class="btn btn-success">Ingresar</button> 
+                  </div>
+              </div>
+            ${ErrorNotification}
+          </form>
+        </template>
+        <template id="Prueba">
+        </template>
+        <template id="ErrorNotification">
+          <div class="notification is-warning">
+            <button class="delete ${HideClass}" onclick="${Hide}"></button>
+            ${Text}
+          </div>
+        </template>
+      </div>
+      </section>
+ </div> -->
+ 
+ <div class="columns">    
+    <aside class="column sidebar is-narrow">
+      <section class="section">
+        <nav class="menu">
+          <ul class="menu-list">
+            ${Menu}
+            <template id="MenuItem">
+              <li><a class="${Active}" href="${Url}">${Text}</a></li>
+            </template>
+          </ul>
+        </nav>
+      </section>
+    </aside>
+    <div class="column">
+      <section class="section">
+        ${Body}
+        <div id="notification-area">
+          <div>${Error}</div>
+        </div>
+        <template id="Home">
+          <div class="content">
+            <h1 class="title">Bolero!</h1>
+            <p>Esta aplicacion es bolero que trabaja con WebAssembly en FSharp</p>
+            <ul>
+              <li>
+                The entire application is driven by
+                <a target="_blank" href="https://fsbolero.github.io/docs/Elmish">Elmish</a>.
+              </li>
+              <li>
+                The menu on the left switches pages based on
+                <a target="_blank" href="https://fsbolero.github.io/docs/Routing">routes</a>.
+              </li>
+              <li>
+                The <a href="/counter">Counter</a> page demonstrates event handlers and data binding in
+                <a target="_blank" href="https://fsbolero.github.io/docs/Templating">HTML templates</a>.
+              </li>
+            </ul>
+            <p>Disfruta escribiendo aplicaciones increibles!</p>
+          </div>
+        </template>
+        <template id="Counter">
+          <h1 class="title">A simple counter</h1>
+          <p>
+              <button onclick="${Decrement}" class="btn btn-secondary">-</button>
+              <input type="number" id="counter" class="input" bind="${Value}">
+              <button onclick="${Increment}" class="btn btn-secondary">+</button>
+          </p>
+          <p>
+            The counter's value is: ${Value}
+          </p>
+        </template>
+        <!-- <template id="SignIn">
+          <h1 class="title">Sign in</h1>
+          <form onsubmit="${SignIn}">
+            <div class="field">
+              <label class="label">Username</label>
+              <div class="control">
+                <input class="input" bind="${Username}" />
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Password</label>
+              <div class="control">
+                <input class="input" type="password" bind="${Password}" />
+              </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                  <button type="submit" class="btn btn-success">Ingresar</button> 
+                </div>
+            </div>
+            ${ErrorNotification}
+          </form>
+        </template>  -->
+        <template id="Prueba">
+          <div id="${Id}">Hello, ${Who}!
+            <input bind-onchange="${Name}">
+            <p>Hello, ${Name}!</p>
+            <p>Hola como estas yo soy angie programando en Boler F# y WebAssembly:
+              <input bind="${Name}">
+            </p>
+            <p>hola:
+              <input bind-onchange="${Name}">
+            </p>
+          </div>
+        <!--  -->
+          <p>
+              <i>Computer, to ${Who}:</i>
+              Hello, ${Who}!
+          </p>
+          <div class="greeting ${Class}">Hola mundo</div>
+          <button onclick="${Greet}">Click in me!</button>      
+          <input bind="${Task}" onkeyu="${Edit}" class="new-todo" placeholder="Escribe lo que quieras" autofocus>
+          <section class="main ${HiddenIfNoEntries">
+            <input bind="${IsCompleted}" id="toogle-all" class="toggle-all" type="checkbox">
+            <label for="toogle-all">Marca el completo</label>
+            <ul class="todo-list">
+              ${Entries}
+              <template id="Entry">
+                <li attr=${CssAttrs}>
+                  <div class="view">
+                    <input bind="${IsCompleted}" class="toggle" type="checkbox"/>
+                    <label ondblclick="${StartEdit}">${Label}</label>
+                    <button onclick="${Remove}" class="destroy"></button>
+                  </div>
+                  <input bind="${EditingTask}" onkeyup="${EditKeyup}" onblur="${EditBlur}" class="edit" name="title" />
+                </li>
+              </template>
+            </ul>        
+          </section>    
+          <footer class="footer ${HiddenIfNoEntries}">
+            <span class="todo-count">${ItemsLeft}</span>
+              <ul class="filters">
+                <li>
+                  <a attr="${CssFilterAll}" href="">All</a>
+                </li>
+                <li>
+                  <a attr="${CssFilterAll}" href="active">Activo</a>
+                </li>
+                <li>
+                  <a attr="${CssFilterCompleted}" href="completed">Completado</a>
+                </li>                      
+              </ul>
+              <button onclick="${ClearCompleted}" class="clear-completed">Limpiar</button>
+        </template>
+      </section>
+    </div> 
+  </div>
+  <template id="Data">
+      <!-- Modal-->
+    <div class="modal fade" id="myAdd" tabindex="-1" role="dialog" aria-labelledby="myAdd" aria-hidden="true">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="myAdd">Crear Nuevo Libro</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Título:</label>
+                <input type="text" class="form-control" id="${Rows}" >
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Autor:</label>
+                  <input type="text" class="form-control" id="recipient-autor">
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Publicidd:</label>
+                <input type="text" class="form-control" id="recipient-publicidad">
+              </div>
+              <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Isbn:</label>
+                  <input type="text" class="form-control" id="recipient-isn">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal"> Cancelar</button>
+            <button type="button" class="btn btn-primary"> Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- M O D A L ----- M O D I F I C A R -->
+    <div class="modal fade" id="myUpd" tabindex="-1" role="dialog" aria-labelledby="myUpd" aria-hidden="true">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="myUpd">Modificar Libro</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Titulo</th>
+                    <th>Autor</th>
+                    <th>Publicidad</th>
+                    <th>Isbn</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${Rows}
+                  <template id="EmptyData">
+                    <tr><td colspan="4">Cargando lista de libros...</td></tr>
+                  </template>
+                </tbody>
+               </table>              
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal"> Cancelar</button>
+            <button type="button" class="btn btn-primary"> Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <h1 class="title">
+      Download data
+      <button class="button" onclick="${Reload}">Reload</button>
+    </h1>
+    <p>
+      Signed in as ${Username}.
+      <button class="button" onclick="${SignOut}">Sign out</button>
+    </p>
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myAdd">
+      <span class="glyphicon glyphicon-plus"></span> Crear
+    </button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myUpd">
+        <span class="glyphicon glyphicon-plus"></span> Modificar
+    </button>
+    <!-- <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myUpd">
+      <span class="glyphicon glyphicon-edit"></span> Modificar
+    </button> -->
+    <!-- <button class="btn btn-primary" ><span class="glyphicon glyphicon-trash"></span> Agregar</button> -->
+    <table class="table is-fullwidth">
+      <thead>
+        <tr>
+          <th>Titulo</th>
+          <th>Autor</th>
+          <th>Publicidad</th>
+          <th>Isbn</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${Rows}
+        <template id="EmptyData">
+          <tr><td colspan="4">Cargando lista de libros...</td></tr>
+        </template>
+      </tbody>
+    </table>
+  </template>
+  <!-- Modal HTML -->
+  <template id="SignIn">
+    <div id="myModal"   class="modal fade">
+      <div class="modal-dialog modal-login">
+        <div class="modal-content">
+            <div class="modal-header">		
+              <h4 class="modal-title">Iniciar Sesión</h4>
+              <button type="button"  class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form  onsubmit="${SignIn}" method="post" >
+                <div class="form-group has-feedback">  
+                  <label for="usrname">Usuario</label>              
+                  <input type="text" class="form-control" bind="${Username}" placeholder="Ingrese Usuario" required="required"  >
+                  <i class="form-control-feedback glyphicon glyphicon-user"></i>
+                </div>
+                <div class="form-group has-feedback"> 
+                  <label for="usrname">Contraseña</label>                                
+                  <input type="password" class="form-control" bind="${Password}" placeholder="Ingrese Contraseña" required="required"  >					
+                  <i class="form-control-feedback glyphicon glyphicon-lock"></i>
+                </div>
+                <div class="form-group">
+                    <button onclick="${SignIn}" type="button" class="btn btn-success btn-block btn-lg" >Ingresar</button>
+                </div>
+                ${ErrorNotification} 
+              </form>		
+          
+            </div>
+        </div>
+      </div>
+    </div>
+  </template> 
+    
+  <template id="ErrorNotification">
+    <div class="notification is-warning">
+      <button class="delete ${HideClass}" onclick="${Hide}"></button>
+      ${Text}
+    </div>
+  </template>
